@@ -37,7 +37,8 @@ new SwingBuilder().edt {
         defaultCloseOperation: WC.EXIT_ON_CLOSE, 
         layout:new GridLayout(0, 2, 2, 2)) {
         photos.each { p ->
-            String url = "http://farm${p.farm}.staticflickr.com/${p.server}/${p.id}_${p.secret}.jpg"
+            String url =
+                    "http://farm${p.farm}.staticflickr.com/${p.server}/${p.id}_${p.secret}.jpg"
             String title = p.title
             label(icon: new ImageIcon(url.toURL()), toolTipText: title)
         }

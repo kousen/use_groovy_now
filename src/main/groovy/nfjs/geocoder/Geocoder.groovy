@@ -1,7 +1,8 @@
 package nfjs.geocoder
 
 class Geocoder {
-    public static final String BASE = 'https://maps.googleapis.com/maps/api/geocode/xml?'
+    public static final String BASE =
+            'https://maps.googleapis.com/maps/api/geocode/xml?'
 
     Stadium fillInLatLng(Stadium stadium) {
         String encoded = [stadium.street, stadium.city, stadium.state].collect {

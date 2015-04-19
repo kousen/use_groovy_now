@@ -7,7 +7,8 @@ import java.io.InputStreamReader;
 public class SumNumbers {
     public static void main(String[] args) {
         System.out.println("Please enter some numbers to sum");
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(
+                new InputStreamReader(System.in));
         int total = 0;
         try {
             String line = br.readLine();

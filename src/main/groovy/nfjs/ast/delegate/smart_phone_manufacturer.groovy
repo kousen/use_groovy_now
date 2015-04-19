@@ -21,10 +21,15 @@ class SmartPhoneWithManufacturer {
             new PhoneWithManufacturer(from: 'Samsung')
     @Delegate CameraWithManufacturer camera =
             new CameraWithManufacturer(from: 'Nikon')
+
+    String getFrom() {
+        "Phone: ${phone.from}, Camera: ${camera.from}"
+    }
 }
 
 SmartPhoneWithManufacturer sp = new SmartPhoneWithManufacturer()
 assert sp.dial('555-1234') == 'Dialing 555-1234...'
 assert sp.takePicture() == 'Taking picture...'
 
-assert sp.from == sp.phone.from
+//assert sp.from == sp.phone.from
+println sp.from
