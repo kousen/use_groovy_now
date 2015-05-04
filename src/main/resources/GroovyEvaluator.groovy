@@ -6,6 +6,6 @@ import nfjs.spring.MortgageApplication
 @CompileStatic
 class GroovyEvaluator implements Evaluator {
     boolean approve(MortgageApplication application) {
-        false
+        true
 	}
 }

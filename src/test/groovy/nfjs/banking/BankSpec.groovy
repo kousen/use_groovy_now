@@ -5,9 +5,6 @@ import nfjs.banking.GroovyAccount
 import nfjs.banking.JavaAccount
 import spock.lang.Specification
 
-/**
- * Created by kousen on 3/7/15.
- */
 class BankSpec extends Specification {
     Bank javaBank
     Bank groovyBank
