@@ -8,11 +8,10 @@ public class Demo {
         ApplicationContext ctx =
             new FileSystemXmlApplicationContext(
                     "src/main/resources/applicationContext.xml");
-        Evaluator e = null;
+        Evaluator e = (Evaluator) ctx.getBean("groovyEvaluator");
         boolean ok;
         
         for (int i = 0; i < 10; i++) {
-            e = (Evaluator) ctx.getBean("groovyEvaluator");
             ok = e.approve(null);
             System.out.println(ok ? "approved" : "denied");
             

@@ -5,7 +5,8 @@ class Geocoder {
             'https://maps.googleapis.com/maps/api/geocode/xml?'
 
     Stadium fillInLatLng(Stadium stadium) {
-        String encoded = [stadium.street, stadium.city, stadium.state].collect {
+        String encoded = [stadium.street, stadium.city,
+                          stadium.state].collect {
             URLEncoder.encode(it, 'UTF-8')
         }.join(',')
         String qs = "address=$encoded"
