@@ -35,7 +35,7 @@ stadiums << new Stadium(name:'Rogers Centre',street:'One Blue Jays Way',city:'To
 stadiums << new Stadium(name:'Nationals Park',street:'1500 South Capitol Street SE',city:'Washington',state:'DC',team:'was')
 
 Sql db = Sql.newInstance(
-    url:'jdbc:h2:build/baseball',driver:'org.h2.Driver')
+    url:'jdbc:h2:build/baseball', driver:'org.h2.Driver')
 
 db.execute "drop table if exists stadium;"
 db.execute '''
