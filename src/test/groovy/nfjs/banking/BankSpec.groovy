@@ -22,10 +22,8 @@ class BankSpec extends Specification {
         groovyBank.deposit(1, 50.0)
 
         then:
-        javaBank.getBalance(1) ==
-                old(javaBank.getBalance(1)) + 50
-        groovyBank.getBalance(1) ==
-                old(groovyBank.getBalance(1)) + 50
+        javaBank.getBalance(1) == old(javaBank.getBalance(1)) + 50
+        groovyBank.getBalance(1) == old(groovyBank.getBalance(1)) + 50
     }
 
     def "withdraw 50 from account 2 subtracts 50"() {
@@ -34,9 +32,7 @@ class BankSpec extends Specification {
         groovyBank.withdraw(2, 50.0)
 
         then:
-        javaBank.getBalance(2) ==
-                old(javaBank.getBalance(2)) - 50
-        groovyBank.getBalance(2) ==
-                old(groovyBank.getBalance(2)) - 50
+        javaBank.getBalance(2) == old(javaBank.getBalance(2)) - 50
+        groovyBank.getBalance(2) == old(groovyBank.getBalance(2)) - 50
     }
 }
