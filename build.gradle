@@ -1,4 +1,7 @@
 apply plugin: 'groovy'
+apply plugin: 'application'
+
+mainClassName = 'nfjs.spring.groovy_demo'
 
 repositories {
     jcenter()
@@ -14,7 +17,7 @@ task generateTestDb(dependsOn:classes, type:JavaExec) {
 
 compileTestGroovy.dependsOn generateTestDb
 
-ext.springVersion = '4.1.5.RELEASE'
+ext.springVersion = '4.2.5.RELEASE'
 ext.spockVersion = '1.0-groovy-2.4'
 
 dependencies {

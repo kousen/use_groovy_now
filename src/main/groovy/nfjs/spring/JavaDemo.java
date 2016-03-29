@@ -1,27 +1,15 @@
 package nfjs.spring;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class JavaDemo {
     public static void main(String[] args) {
-        ApplicationContext ctx =
-            new FileSystemXmlApplicationContext(
-                    "src/main/resources/applicationContext.xml");
-        Evaluator e = (Evaluator) ctx.getBean("groovyEvaluator");
-        boolean ok;
-        
-        for (int i = 0; i < 10; i++) {
-            ok = e.approve(null);
-            System.out.println(ok ? "approved" : "denied");
-            
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException ie) {
-                ie.printStackTrace();
-            }
-        }
-        
-        ((FileSystemXmlApplicationContext) ctx).close();
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+        Evaluator evaluator = ctx.getBean("javaEvaluator", Evaluator.class);
+
+        boolean result = evaluator.approve(null);
+        System.out.println((result ? "approved" : "denied"));
     }
 }

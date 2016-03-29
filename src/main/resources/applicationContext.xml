@@ -8,10 +8,7 @@
         http://www.springframework.org/schema/lang
         http://www.springframework.org/schema/lang/spring-lang.xsd">
 
-    <bean id="javaEvaluator" class="nfjs.spring.JavaEvaluator" />
-
-    <lang:groovy id="groovyEvaluator" 
-        script-source="file:src/main/resources/GroovyEvaluator.groovy"
-        refresh-check-delay="1000" />
-
+    <lang:groovy id="groovyEvaluator"
+                 script-source="file:src/main/resources/GroovyEvaluator.groovy"
+                 refresh-check-delay="1000" />
 </beans>
