@@ -3,7 +3,7 @@ package nfjs.spring;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-public class Demo {
+public class JavaDemo {
     public static void main(String[] args) {
         ApplicationContext ctx =
             new FileSystemXmlApplicationContext(
