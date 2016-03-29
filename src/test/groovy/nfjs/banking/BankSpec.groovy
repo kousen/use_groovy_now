@@ -10,10 +10,10 @@ class BankSpec extends Specification {
     Bank groovyBank
 
     void setup() {
-        javaBank = new Bank([new JavaAccount(1, 100.0),
-                             new JavaAccount(2, 100.0)])
-        groovyBank = new Bank([new GroovyAccount(1, 100.0),
-                               new GroovyAccount(2, 100.0)])
+        javaBank = new Bank([new JavaAccount(id: 1, balance: 100.0),
+                             new JavaAccount(id: 2, balance: 100.0)])
+        groovyBank = new Bank([new GroovyAccount(id: 1, balance: 100.0),
+                               new GroovyAccount(id: 2, balance: 100.0)])
     }
 
     def "deposit 50 to account 1 adds 50"() {

@@ -6,11 +6,6 @@ public class JavaAccount implements Account {
     private Integer id;
     private BigDecimal balance;
 
-    public JavaAccount(Integer id, BigDecimal balance) {
-        this.id = id;
-        this.balance = balance;
-    }
-
     public Integer getId() {
         return id;
     }
