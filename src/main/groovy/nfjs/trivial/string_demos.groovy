@@ -1,4 +1,4 @@
-package nfjs
+package nfjs.trivial
 
 String s = 'this is a string'
 println s + ' and more'
