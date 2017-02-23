@@ -17,11 +17,11 @@ task generateTestDb(dependsOn:classes, type:JavaExec) {
 
 compileTestGroovy.dependsOn generateTestDb
 
-ext.springVersion = '4.2.5.RELEASE'
+ext.springVersion = '4.3.6.RELEASE'
 ext.spockVersion = '1.0-groovy-2.4'
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.4.6'
+    compile 'org.codehaus.groovy:groovy-all:2.4.8'
     compile "org.springframework:spring-context:$springVersion"
     compile "org.springframework:spring-jdbc:$springVersion"
 
