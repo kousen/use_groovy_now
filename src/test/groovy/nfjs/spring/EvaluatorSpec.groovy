@@ -1,16 +1,15 @@
 package nfjs.spring
 
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.ContextConfiguration
 import spock.lang.Specification
 
-import javax.annotation.Resource
-
 @ContextConfiguration(classes = AppConfig)
 class EvaluatorSpec extends Specification {
-    @Resource(name = 'javaEvaluator')
+    @Autowired
     Evaluator javaEvaluator
 
-    @Resource(name = 'groovyEvaluator')
+    @Autowired
     Evaluator groovyEvaluator
 
     def 'dependency injection works'() {

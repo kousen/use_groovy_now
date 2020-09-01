@@ -1,4 +1,3 @@
-import groovy.transform.CompileStatic
 import nfjs.spring.Evaluator
 import nfjs.spring.MortgageApplication
 

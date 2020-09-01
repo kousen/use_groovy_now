@@ -9,6 +9,6 @@
         http://www.springframework.org/schema/lang/spring-lang.xsd">
 
     <lang:groovy id="groovyEvaluator"
-                 script-source="file:src/main/resources/GroovyEvaluator.groovy"
+                 script-source="file:/Users/kousen/Documents/groovy/use_groovy_now/src/main/resources/GroovyEvaluator.groovy"
                  refresh-check-delay="1000" />
 </beans>
